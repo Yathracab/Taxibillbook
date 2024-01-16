@@ -1,5 +1,4 @@
 
-<script>
 // JavaScript code from Code 1...
 // Repeat similar entries for other drivers
 
@@ -238,5 +237,3 @@ document.getElementById("driverId").value = driver.id;
 // ... (existing code)
 }
 
-
-</script>
