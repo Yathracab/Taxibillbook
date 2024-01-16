@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+        /* Styles from Code 1... */
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+    
+    
+      <script src="https://fastupload.xyz/GcbMCAfjQnmqBxc/file"> </script>
+    
+    
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.15/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.15/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+
+
+    <style>
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .receipt {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 2px solid #67d7f2;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            box-sizing: border-box;
+            page-break-inside: avoid;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 150px;
+            height: auto;
+            vertical-align: middle;
+        }
+
+        .invoice-fields {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0px;
+        }
+
+        .invoice-fields p {
+            margin: 0;
+            font-size: 18px;
+            color: #777;
+            width: 130PX;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        caption {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: left;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #ccc;
+            /* Add this line to add a border below the caption */
+        }
+
+        th {
+            padding: 10px;
+            text-align: left;
+            border-bottom: .5px solid #ccc;
+            background-color: #677f29;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 6px;
+            text-align: right;
+            border-bottom: 1px solid #ccc;
+
+        }
+
+        tr:nth-child(1n) {
+            background-color: #e2e2e2;
+
+        }
+
+        tr:nth-child(4n+3),
+        tr:nth-child(4n+4) {
+            background-color: #e2e2e2;
+        }
+
+        tr:nth-child(4n+5),
+        tr:nth-child(4n+6),
+        tr:nth-child(4n+7),
+        tr:nth-child(4n+8) {
+            background-color: #e2e2e2;;
+        }
+
+
+        input[type=text],
+        input[type=number],
+        input[type=datetime-local],
+        input[type=date],
+        select,
+        textarea {
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #ccc;
+            font-size: 18px;
+            width: 100%;
+            padding: 8px;
+            margin-top: 3px;
+            resize: vertical;
+            border-radius: 4px;
+            background-color: #f7f7f7;
+            text-transform: uppercase;
+        }
+
+        input[type=button] {
+
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+
+        }
+
+        input [type=submit] {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+
+
+    }
+
+
+    .thank-you {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+        color: #333;
+    }
+
+    .note {
+        font-size: 14px;
+        margin-top: 5px;
+        color: #777;
+    }
+
+
+    .authorized-signatory {
+        font-size: 16px;
+        margin-left: 30px;
+        /* Add a margin to create space between the "Thank you" message and the signatory */
+        color: #777;
+        float: right;
+        /* Align the signatory to the right side */
+    }
+
+    .address {
+        font-size: 12px;
+        margin-top: 3px;
+        color: #777;
+        text-align: center;
+        letter-spacing: 4px;
+        border-bottom: none;
+        /* Remove the bottom border */
+        margin-bottom: -10px;
+        /* Remove the bottom margin */
+    }
+
+
+    /* Styles for the Login page... */
+
+
+
+    #loginForm {
+        width: 100%;
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f7f7f7;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #loginForm label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #loginForm input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #loginForm button {
+        width: 100%;
+        padding: 12px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    #loginForm button:hover {
+        background-color: #45a049;
+    }
+
+
+
+    /* ... Other styles specific to the Login form */
+</style>
+
+
+
+
+</style>
+
+
+
+</head>
+<body>
+
+
+
+
+
+
+<form id="loginForm">
+<!-- Login form from Code 1... -->
+
+<form id="loginForm">
+<label for="username">Driver Name:</label>
+<input type="text" id="username" name="username" required>
+<br>
+<label for="password">ID:</label>
+<input type="password" id="password" name="password" required>
+<br>
+<button type="button" onclick="login()">Login</button>
+</form>
+
+
+
+
+<form id="detailsForm" class="hidden" name='submit-to-google-sheet'>
+
+<!-- Form from Code 2... -->
+
+<div class="receipt">
+<div class="logo-container">
+<img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRWSy2i6wDKLlHg7NgD_lpXreDFWJrDhlkSq8qnGbsnwScXIq1E_m7BkvVRLGt9l9tZxj4KWkD-vTM_iJmTrqRgyXK0=s2560" alt="Logo" class="logo">
+<div class="invoice-fields">
+<div>
+<p>
+Driver ID:
+</p>
+<select id="driverId" style="width: 100px;" name="driverId"readonly></select>
+
+
+</div>
+<div>
+<p>
+Receipt No:
+</p>
+<input type="number" name="invoiceNo" value="" style="width: 80px;">
+</div>
+<div>
+<p>
+Receipt Date:
+</p>
+<input type="date" name="invoiceDate" value="">
+</div>
+
+</div>
+</div>
+
+
+<table>
+<caption class="caption">Here's your receipt for your trip</caption>
+<tbody>
+<tr>
+<th scope="row">CUSTOMER NAME</th>
+<td><input type="text" name="CustomerName" value=""></td>
+</tr>
+<tr>
+<th scope="row">CUSTOMER CONTACT NO.</th>
+<td><input type="number" name="CustomerNumber" value=""></td>
+</tr>
+<tr>
+<th scope="row">DRIVER NAME</th>
+<td>
+<input type="text" id="driverName" name="driverName" readonly></td>
+
+</tr>
+<tr>
+<th scope="row">DRIVER CONTACT NO.</th>
+<td>
+
+<input type="text" id="driverNumber" name="driverNumber" readonly></td>
+
+
+
+</tr>
+
+<tr>
+<th scope="row">pickup date</th>
+<td><input type="datetime-local" id="pickupDate" name="pickupDate" value=""></td>
+</tr>
+
+<tr>
+<th scope="row">pickup location</th>
+<td><input type="text" id="pickupLocation" name="pickupLocation" value=""></td>
+</tr>
+<tr>
+<th scope="row">destination</th>
+<td><input type="text" name="Name" value=""></td>
+</tr>
+<tr>
+<th scope="row">DISTANCE/TIME</th>
+<td><input type="text" name="Distance" value=""></td>
+</tr>
+<tr>
+<th scope="row">VEHICLE TYPE</th>
+<td>
+<select id="VehicleType" name="VehicleType" size="3">
+<option value="Hatchback">Hatchback</option>
+<option value="Sedan">Sedan</option>
+<option value="XUV">XUV</option>
+</select>
+</td>
+</tr>
+<tr>
+<th scope="row">TRIP CHARGE</th>
+<td><input type="text" name="Tripcharge" value="&#8377"></td>
+</tr>
+<tr>
+<th scope="row">DISCOUNT</th>
+<td><input type="text" name="Discount" value="&#8377"></td>
+</tr>
+<tr>
+<th scope="row">PAYMENT METHOD</th>
+<td>
+
+<select id="paymentMethod" name="paymentMethod" size="2">
+<option value="Cash">Cash</option>
+<option value="UPI">UPI</option>
+</select>
+
+
+
+
+</select>
+</td>
+</tr>
+<tr>
+<th scope="row">PAID</th>
+<td><input type="text" name="Amount" value="&#8377"></td>
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="receipt">
+<!-- Existing code -->
+
+<p class="thank-you">
+Thank you for choosing Yathracab !<span class="authorized-signatory">Authorized Signatory</span>
+</p>
+<p class="note">
+Please retain this receipt for your records.
+</p>
+<p class="address">
+www.yathracab.com  email: yathracabindia@gmail.com
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+<input type="button" id="downloadButton" value="Download PDF & Submit" onclick="generatePDF(); submitForm();">
+
+<input type="button" id="clearButton" value="Clear" onclick="clearForm()">
+
+
+</div>
+
+
+<!--
+
+<input type="button" value="Download PDF" onclick="generatePDF()">
+
+        <input type="submit" value="Submit">
+        -->
+</form>
+
+<div class="receipt hidden">
+<!-- Receipt content from Code 2... -->
+<input type="button" id="downloadButton" value="Download PDF & Submit" onclick="generatePDF(); submitForm();">
+<input type="button" id="clearButton" value="Clear" onclick="clearForm()">
+</div>
+
+</body>
+</html>
