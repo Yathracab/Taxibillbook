@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yathracab Group</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        h2 {
+            color: #007bff;
+            margin-top: 30px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact {
+            font-weight: bold;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yathracab WhatsApp Group Kochi-Kasaragod</h1>
+        <p>💡 Useful Information for Drivers 💡</p>
+    </header>
+    <div class="container">
+        <!-- CNG Pumps -->
+        <div class="section">
+            <h2>CNG Pump</h2>
+            <p>📍 <a href="https://maps.app.goo.gl/MPxLNHiwaeiySQ1m6" target="_blank">All India CNG Pump List</a></p>
+        </div>
+
+        <!-- Tourist Places -->
+        <div class="section">
+            <h2>Tourist Places</h2>
+            <p>📍 <a href="https://maps.app.goo.gl/KVsUuQnXhEAdh4Zo8" target="_blank">Kochi Tourist Places</a></p>
+            <p>📍 <a href="https://maps.app.goo.gl/uxKfTy89fdAEswwL7" target="_blank">Munnar Tourist Places</a></p>
+        </div>
+
+        <!-- Resort/Hotel -->
+        <div class="section">
+            <h2>Resort/Hotel</h2>
+            <h3>Munnar</h3>
+            <p>Jayettan Homestay Anachal 🪙 - <a href="tel:+918075279375">+918075279375</a> | <a href="https://maps.app.goo.gl/fixPKnXo4LqYZKL8A" target="_blank">Location</a></p>
+            <p>Green Portico Cottage Anachal 🪙 - Basil <a href="tel:+918330865891">83308 65891</a> | <a href="https://maps.app.goo.gl/FmsdRN8xYidqEZmz5" target="_blank">Location</a></p>
+
+            <h3>Thekkady</h3>
+            <p>White Fort Thekkady 🪙 - <a href="tel:+918547244772">8547244772</a> | <a href="https://maps.app.goo.gl/DY1xoFyf69QnF8HF7" target="_blank">Location</a></p>
+        </div>
+
+        <!-- Ayurvedic Spa -->
+        <div class="section">
+            <h2>Ayurvedic Spa/Massage</h2>
+            <h3>Thekkady</h3>
+            <p>Hitha Ayurvedic Spa 🪙 - <a href="tel:+919633841424">+91 96338 41424</a> | <a href="https://maps.app.goo.gl/PRD9Swz4XUvotB6s5" target="_blank">Location</a></p>
+
+            <h3>Munnar</h3>
+            <p>Angel Ayurspa - <a href="tel:+919633310504">096333 10504</a> | <a href="https://maps.app.goo.gl/irLgsGe8hH9LAGxG7" target="_blank">Location</a></p>
+        </div>
+
+        <!-- House Boat -->
+        <div class="section">
+            <h2>House Boat</h2>
+            <p>📍 Alappy - <a href="https://maps.app.goo.gl/vgAh4RrFQM7wsFCMA" target="_blank">Location</a></p>
+            <p>📍 Ernakulam (Blumarine Backwaters, Kundannur Nisarka) - <a href="tel:+919645657234">96456 57234</a> | <a href="https://maps.app.goo.gl/VR8mXPhfaXoarEiY8" target="_blank">Location</a></p>
+        </div>
+
+        <!-- Vehicle Fine -->
+        <div class="section">
+            <h2>Vehicle Fine</h2>
+            <p>💻 <a href="https://echallan.parivahan.gov.in/index/accused-challan" target="_blank">Check Fines Online</a></p>
+            <p>💻 <a href="https://payment.keralapolice.gov.in/epayment.com" target="_blank">Pay Fines Online</a></p>
+        </div>
+
+        <!-- Additional Sections -->
+        <div class="section">
+            <h2>Contact Details</h2>
+            <p>For more information, reach out to our support contacts!</p>
+        </div>
+    </div>
+</body>
+</html>
